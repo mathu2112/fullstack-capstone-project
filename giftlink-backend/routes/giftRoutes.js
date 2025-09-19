@@ -14,7 +14,7 @@ router.get('/', async (req, res, next) => {
         const gifts = await collection.find({}).toArray();
         res.json(gifts);
     } catch (e) {
-        logger.console.error('oops something went wrong', e);
+        logger.error('oops something went wrong', e);  // fixed
         next(e);
     }
 });
@@ -37,7 +37,6 @@ router.get('/:id', async (req, res, next) => {
     }
 });
 
-
 // Add a new gift
 router.post('/', async (req, res, next) => {
     try {
@@ -45,7 +44,8 @@ router.post('/', async (req, res, next) => {
         const collection = db.collection("gifts");
         const gift = await collection.insertOne(req.body);
 
-        res.status(201).json(gift.ops[0]);
+        // fixed: insertOne no longer returns 'ops'
+        res.status(201).json({ ...req.body, _id: gift.insertedId });
     } catch (e) {
         next(e);
     }
