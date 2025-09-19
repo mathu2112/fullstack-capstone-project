@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { urlConfig } from './config';                  // config.js in src/
-import { useAppContext } from './context/AuthContext'; // AuthContext in src/context/
+import { urlConfig } from '../config';                  // config.js in src/
+import { useAppContext } from '../context/AuthContext'; // AuthContext in src/context/
 import { useNavigate } from 'react-router-dom';
 import './RegisterPage.css';
 
@@ -23,7 +23,6 @@ function RegisterPage() {
             });
 
             const json = await response.json();
-            console.log('json data', json);
 
             if (json.authtoken) {
                 sessionStorage.setItem('auth-token', json.authtoken);
