@@ -4,6 +4,8 @@ import MainPage from './components/MainPage/MainPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
+import RegisterPage from './components/RegisterPage';
+
 
 function App() {
 
