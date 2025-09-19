@@ -1,0 +1,48 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  lint_js:
+    name: Lint JavaScript Files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install JSHint
+        run: npm install jshint
+
+      - name: Run Linter
+        run: |
+          echo "Running JSHint..."
+          npx jshint "./giftlink-backend/**/*.js"
+          echo "Linted all JS files successfully"
+
+  client_build:
+    name: Build client
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Dependencies & Build
+        run: |
+          cd giftlink-frontend
+          npm ci
+          npm run build
+          echo "Client-side build successfully"
