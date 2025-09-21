@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { urlConfig } from 'config';
+import { urlConfig } from '../config';
 import { useAppContext } from 'context/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
 import './LoginPage.css';
