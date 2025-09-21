@@ -134,6 +134,6 @@ import './RegisterPage.css';
     }
 
     export default RegisterPage;
-    // src/config.js
+
   
    
