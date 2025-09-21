@@ -1,8 +1,9 @@
-iimport React, { useState, useEffect } from 'react';
-import { urlConfig } from 'config';                 // absolute import
-import { useAppContext } from 'context/AuthContext'; // absolute import
+import React, { useState, useEffect } from 'react';
+import { urlConfig } from '../config';                  // up 1 level to src
+import { useAppContext } from '../context/AuthContext'; // up 1 level to src/context
 import { useNavigate } from 'react-router-dom';
 import './LoginPage.css';
+
 
 function LoginPage() {
     const [email, setEmail] = useState('');
