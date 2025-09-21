@@ -135,7 +135,4 @@ import './RegisterPage.css';
 
     export default RegisterPage;
     // src/config.js
-    export const urlConfig = {
-      backendUrl: "http://localhost:5000"
-    };
-
+   
