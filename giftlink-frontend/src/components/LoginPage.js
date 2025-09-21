@@ -1,9 +1,12 @@
-import React, { useState,useEffect } from 'react';
-//Step 1 - Task 1
-import {urlConfig} from '../../config';
-//Step 1 - Task 2
-import { useAppContext } from '../../context/AuthContext';
-//Step 1 - Task 3
+import React, { useState, useEffect } from 'react';
+
+// Correct path to config.js inside src/
+import { urlConfig } from '../config';
+
+// Correct path to AuthContext inside src/context/
+import { useAppContext } from '../context/AuthContext';
+
+// React Router
 import { useNavigate } from 'react-router-dom';
 
 import './LoginPage.css';
