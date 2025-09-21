@@ -1,14 +1,16 @@
-    import React, { useState } from 'react';
-    //Step 1 - Task 1
-    import {urlConfig} from '../../config';
+import React, { useState } from 'react';
 
-    //Step 1 - Task 2
-    import { useAppContext } from '../../context/AuthContext';
+// Step 1 - Task 1
+import { urlConfig } from '../config';  // <-- go up one level from components/
 
-    //Step 1 - Task 3
-    import { useNavigate } from 'react-router-dom';
+// Step 1 - Task 2
+import { useAppContext } from '../context/AuthContext';  // <-- go up one level to context/
 
-    import './RegisterPage.css';
+// Step 1 - Task 3
+import { useNavigate } from 'react-router-dom';
+
+import './RegisterPage.css';
+
 
     function RegisterPage() {
         const [firstName, setFirstName] = useState('');
