@@ -1,14 +1,7 @@
-import React, { useState, useEffect } from 'react';
-
-// Correct path to config.js inside src/
-import { urlConfig } from '../config';
-
-// Correct path to AuthContext inside src/context/
-import { useAppContext } from '../context/AuthContext';
-
-// React Router
+iimport React, { useState, useEffect } from 'react';
+import { urlConfig } from 'config';                 // absolute import
+import { useAppContext } from 'context/AuthContext'; // absolute import
 import { useNavigate } from 'react-router-dom';
-
 import './LoginPage.css';
 
 function LoginPage() {
