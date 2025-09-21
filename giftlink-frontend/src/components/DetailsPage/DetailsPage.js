@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { urlConfig } from 'config';  // absolute import
 import './DetailsPage.css';
-import { urlConfig } from '../../config';
+
 
 function DetailsPage() {
     const navigate = useNavigate();
