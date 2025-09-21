@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { urlConfig } from '../config';
+import { urlConfig } from '../../config';
 import { useAppContext } from 'context/AuthContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './SearchPage.css';
