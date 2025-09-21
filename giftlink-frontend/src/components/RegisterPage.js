@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { urlConfig } from 'config';                  // absolute import from src
+import { urlConfig } from '../config';                  // absolute import from src
 import { useAppContext } from 'context/AuthContext'; // absolute import from src/context
 import { useNavigate, Link } from 'react-router-dom';
 import './RegisterPage.css';
