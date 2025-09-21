@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { urlConfig } from '../../config';
-import { useAppContext } from '../context/AuthContext';
+import { urlConfig } from '../config';                  // up 1 level to src
+import { useAppContext } from '../context/AuthContext'; // up 1 level to src/context
 import { useNavigate } from 'react-router-dom';
 import './RegisterPage.css';
+
 
 
 function RegisterPage() {
