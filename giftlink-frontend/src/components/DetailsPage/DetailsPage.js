@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { urlConfig } from 'config';  // absolute import
+import { urlConfig } from '../../config';               // up 2 levels to src
+import { useAppContext } from '../../context/AuthContext'; // up 2 levels to src/context
 import './DetailsPage.css';
+
 
 
 function DetailsPage() {
