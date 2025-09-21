@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { urlConfig } from '../config';
-
-
+import { urlConfig } from 'config';                 // absolute import
+import { useAppContext } from 'context/AuthContext'; // absolute import
+import { useNavigate } from 'react-router-dom';
 import './RegisterPage.css';
+
 
 function RegisterPage() {
     const [firstName, setFirstName] = useState('');
