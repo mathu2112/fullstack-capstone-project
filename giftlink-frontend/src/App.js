@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import RegisterPage from './components/RegisterPage';
+import { AuthProvider } from './context/AuthContext';
 
 
 function App() {
