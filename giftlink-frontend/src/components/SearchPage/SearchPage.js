@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { urlConfig } from '../config';                  // up 1 level to src
+import { useAppContext } from '../context/AuthContext'; // up 1 level to src/context
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { urlConfig } from 'config';  // absolute import
+
 
 
 
