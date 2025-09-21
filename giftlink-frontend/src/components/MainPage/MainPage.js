@@ -1,6 +1,6 @@
-    import React, { useState, useEffect } from 'react';
-    import { useNavigate } from 'react-router-dom';
-    import {urlConfig} from '../../config';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { urlConfig } from '../config';
 
     function MainPage() {
         const [gifts, setGifts] = useState([])
